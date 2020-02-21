@@ -150,11 +150,20 @@ function StartSyncService
 
 function BackupCollection
 {
-    echo "Backing up collection"
+    echo "Backing up collection directory"
     echo "-from  <$fromDir>"
     echo "-to    <$toDir>"
 
     Copy-Item -Recurse $fromDir $toDir 
+
+    $fromFile           = $collectionRootDir + $collectionName + ".Kno"
+    $toFile             = $backupRootDir + $backupName + ".Kno"
+
+    echo "Backing up collection file"
+    echo "-from  <$fromFile>"
+    echo "-to    <$toFile>"
+
+    Copy-Item $fromFile $toFile
 
     echo "-Done!"
     echo ""
@@ -198,7 +207,7 @@ function VerifyBackupIntegrity
 function RunSuperMemo
 {
     echo "running SuperMemo"
-    $knoFilePath = $fromDir + "\" + $CollectionName + ".Kno"
+    $knoFilePath = $fromDir + ".Kno"
     echo "-path $knoFilePath"
     (Start-Process $knoFilePath -WorkingDirectory $fromDir -PassThru).WaitForExit()
     echo "-Done!"
@@ -248,7 +257,7 @@ function Main
     RunSuperMemo
     StartSyncService
     Report
-    PauseForAnyKey
+    # PauseForAnyKey
 }
 
 Main
