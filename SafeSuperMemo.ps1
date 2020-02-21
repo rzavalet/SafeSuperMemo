@@ -257,7 +257,7 @@ function Main
     RunSuperMemo
     StartSyncService
     Report
-    # PauseForAnyKey
+    PauseForAnyKey
 }
 
 Main

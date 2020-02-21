@@ -44,7 +44,7 @@ $onedrivePath = Join-Path -Path $env:LOCALAPPDATA -ChildPath Microsoft\OneDrive\
 #
 #    $useService = [SyncService]::OneDrive
 #
-$useService = [SyncService]::Dropbox
+$useService = [SyncService]::OneDrive
 
 
 #
@@ -56,7 +56,7 @@ $useService = [SyncService]::Dropbox
 #     then this line should be:  
 #         $collectionRootDir = C:\dir1\    (include trailing slash!)
 #
-$collectionRootDir = "C:\dir1\"
+$collectionRootDir = "C:\Users\rzavalet\OneDrive\SuperMemo\"
 
 
 #
@@ -68,7 +68,7 @@ $collectionRootDir = "C:\dir1\"
 #     then this line should be: 
 #         $collectionName = My Collection
 #
-$collectionName = "My Collection"
+$collectionName = "2020_Learning"
 
 
 #
@@ -77,4 +77,4 @@ $collectionName = "My Collection"
 # This is the directory that will contain all of the 
 # time-stamped backups.
 #
-$backupRootDir = "F:\SuperMemo\Backups\"
+$backupRootDir = "C:\Users\rzavalet\Desktop\Personal\SuperMemoBackups\"
