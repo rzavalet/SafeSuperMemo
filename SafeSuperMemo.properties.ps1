@@ -56,7 +56,7 @@ $useService = [SyncService]::OneDrive
 #     then this line should be:  
 #         $collectionRootDir = C:\dir1\    (include trailing slash!)
 #
-$collectionRootDir = "C:\Users\rzavalet\OneDrive\SuperMemo\"
+$collectionRootDir = $env:HOMEDRIVE + $env:HOMEPATH + "\OneDrive\SuperMemo\"
 
 
 #
@@ -77,4 +77,4 @@ $collectionName = "2020_Learning"
 # This is the directory that will contain all of the 
 # time-stamped backups.
 #
-$backupRootDir = "C:\Users\rzavalet\Desktop\Personal\SuperMemoBackups\"
+$backupRootDir = "C:\tmp\SuperMemoBackups\"
